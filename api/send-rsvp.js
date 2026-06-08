@@ -19,16 +19,27 @@ export default async function handler(req, res) {
 Алкоголь: ${(data.alcohol || []).join(', ') || '-'}
 Комментарий: ${data.comment || '-'}`;
 
-  const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: TELEGRAM_CHAT_ID,
-      text
-    })
-  });
+  const chatIds = TELEGRAM_CHAT_ID
+    .split(',')
+    .map(id => id.trim())
+    .filter(Boolean);
 
-  if (!response.ok) {
+  const results = await Promise.all(
+    chatIds.map(chatId =>
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text
+        })
+      })
+    )
+  );
+
+  const hasError = results.some(response => !response.ok);
+
+  if (hasError) {
     return res.status(500).send('Telegram error');
   }
 
