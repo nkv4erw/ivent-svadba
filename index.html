@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Роман & Анна — 28.08.2026</title>
+  <meta name="description" content="Свадебное приглашение Романа и Анны" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="hero" id="top">
+    <nav class="nav">
+      <span>Роман & Анна</span>
+      <button class="nav-btn" data-open-rsvp>Ответить</button>
+    </nav>
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <p class="eyebrow">Wedding invitation</p>
+        <h1>Роман<br><span>&</span> Анна</h1>
+        <p class="date">28 августа 2026</p>
+        <p class="lead">Мы будем счастливы разделить с вами день, с которого начинается наша семья.</p>
+        <div class="actions">
+          <button class="primary" data-open-rsvp>Подтвердить присутствие</button>
+          <a class="secondary" href="#details">Подробнее</a>
+        </div>
+      </div>
+      <div class="photo-stack reveal">
+        <img src="assets/couple-1.jpg" alt="Роман и Анна" onerror="this.classList.add('missing')">
+        <img src="assets/couple-2.jpg" alt="Роман и Анна" onerror="this.classList.add('missing')">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section countdown-section reveal">
+      <p class="eyebrow">До нашей свадьбы осталось</p>
+      <div class="countdown" aria-label="Обратный отсчёт">
+        <div><strong id="days">0</strong><span>дней</span></div>
+        <div><strong id="hours">0</strong><span>часов</span></div>
+        <div><strong id="minutes">0</strong><span>минут</span></div>
+        <div><strong id="seconds">0</strong><span>секунд</span></div>
+      </div>
+    </section>
+
+    <section class="section cards" id="details">
+      <article class="card reveal">
+        <span class="icon">✦</span>
+        <h2>Дата и время</h2>
+        <p>28 августа 2026 года</p>
+        <p>Начало торжества в 17:00</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon">⌁</span>
+        <h2>Место</h2>
+        <p>Загородный Комплекс «Кристалл-Тургояк»</p>
+        <p>Миасс, Озеро Тургояк, 1</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon">☽</span>
+        <h2>Трансфер</h2>
+        <p>В 16:00 гостей будет ждать трансфер на автовокзале.</p>
+      </article>
+    </section>
+
+    <section class="section venue reveal">
+      <div class="venue-text">
+        <p class="eyebrow">Место проведения</p>
+        <h2>Кристалл<br>Тургояк</h2>
+        <p>
+          Среди живописной природы озера Тургояк мы проведём один из самых важных дней нашей жизни.
+          Будем счастливы разделить этот вечер вместе с вами.
+        </p>
+      </div>
+    
+      <div class="venue-gallery">
+        <img src="assets/venue-1.jpg" alt="Кристалл-Тургояк">
+        <img src="assets/venue-2.jpg" alt="Озеро Тургояк">
+        <img src="assets/venue-3.jpg" alt="Место проведения свадьбы">
+      </div>
+    </section>
+
+    <section class="section timeline reveal">
+      <p class="eyebrow">План дня</p>
+      <h2>Небольшой тайминг</h2>
+      <div class="timeline-list">
+        <div><time>16:00</time><p>Трансфер от автовокзала</p></div>
+        <div><time>17:00</time><p>Сбор гостей и начало праздника</p></div>
+        <div><time>18:00</time><p>Ужин, поздравления и тёплые моменты</p></div>
+        <div><time>20:00</time><p>Музыка, танцы и вечер у озера</p></div>
+      </div>
+    </section>
+
+    <section class="section dress reveal">
+      <div>
+        <p class="eyebrow">Dress code</p>
+        <h2>Мы будем благодарны, если вы поддержите палитру вечера</h2>
+        <p>Ориентир — природные, спокойные и элегантные оттенки, как на изображении.</p>
+      </div>
+      <img src="assets/dresscode.png" alt="Желательный дресс-код свадьбы">
+    </section>
+
+    <section class="section map reveal">
+      <p class="eyebrow">Как добраться</p>
+      <h2>Загородный Комплекс «Кристалл-Тургояк»</h2>
+      <iframe title="Карта места проведения" src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%B8%D0%B0%D1%81%D1%81%2C%20%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%A2%D1%83%D1%80%D0%B3%D0%BE%D1%8F%D0%BA%2C%201%2C%20%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB-%D0%A2%D1%83%D1%80%D0%B3%D0%BE%D1%8F%D0%BA&z=14" loading="lazy"></iframe>
+    </section>
+
+    <section class="section interactive reveal">
+      <p class="eyebrow">Маленький интерактив</p>
+      <h2>Поймайте 5 сердечек</h2>
+      <p>Нажимайте на появляющиеся сердечки — это маленькое пожелание удачи для нас.</p>
+      <button class="secondary" id="heartGame">Начать</button>
+      <p class="score">Поймано: <span id="score">0</span>/5</p>
+    </section>
+
+    <section class="section final-cta reveal">
+      <h2>Будем ждать вас</h2>
+      <p>Пожалуйста, подтвердите присутствие, чтобы мы всё подготовили с заботой.</p>
+      <button class="primary" data-open-rsvp>Заполнить анкету</button>
+    </section>
+  </main>
+
+  <dialog class="modal" id="rsvpModal">
+    <form method="dialog" class="modal-box" id="rsvpForm">
+      <button class="close" type="button" data-close-rsvp>×</button>
+      <p class="eyebrow">RSVP</p>
+      <h2>Подтвердите присутствие</h2>
+      <label>Полное имя<input required name="name" placeholder="Иван Иванов"></label>
+      <label>Вы придёте на свадьбу?
+        <select required name="attendance"><option value="">Выберите</option><option>Да, приду</option><option>К сожалению, не смогу</option></select>
+      </label>
+      <label>Планируете прийти с кем-то?<input name="guest" placeholder="Например: +1, имя гостя"></label>
+      <fieldset>
+        <legend>Что предпочитаете из алкоголя?</legend>
+        <label><input type="checkbox" name="alcohol" value="Белое вино"> Белое вино</label>
+        <label><input type="checkbox" name="alcohol" value="Красное вино"> Красное вино</label>
+        <label><input type="checkbox" name="alcohol" value="Шампанское"> Шампанское</label>
+        <label><input type="checkbox" name="alcohol" value="Коньяк/виски"> Коньяк/виски</label>
+        <label><input type="checkbox" name="alcohol" value="Водка"> Водка</label>
+      </fieldset>
+      <label>Комментарий<textarea name="comment" rows="3" placeholder="Аллергии, пожелания или важные детали"></textarea></label>
+      <button class="primary" type="submit">Отправить</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
